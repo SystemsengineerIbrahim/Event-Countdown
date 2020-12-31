@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Bangers'
+    rel='stylesheet'
+    type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="newyear.css">
+		<title>B-day</title>
+		<style>
+		body {
+			padding: 30px;
+      /* IDEA: https://wallpapercave.com/wp/wp3115451.jpg bmw background */
+      /* IDEA: https://www.portalpower.com.br/wp-content/uploads/2020/10/Among-Us-Wallpaper-1-1140x641.jpg among us background */
+      /* IDEA: https://images6.alphacoders.com/105/1050408.jpg mario background */
+			background: white;
+			background-image: url(newyear.gif);
+      background-repeat: repeat;
+	    background-size: 50%;
+			font-family: 'Bangers', serif;
+			font-size: 48px;
+
+		}
+
+
+
+/* IDEA: #7AA2CA , B0C4DE, color */
+		.countdownContainer{
+			position: absolute;;
+			top: 20%;
+			left: 50%;
+			transform : translateX(-50%) translateY(-20%);
+			text-align: center;
+			background: #686C7D;
+			border: 1px solid #999;
+			padding: 10px;
+			box-shadow: 0 0 5px 3px #ccc;
+      background-color: transparent;
+/* IDEA:
+
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text; */
+
+		}
+
+		.info {
+			font-size: 150px;
+		}
+		</style>
+	</head>
+
+	<body class="hintergrund">
+
+		<table class="countdownContainer">
+			<tr class="info">
+				<td colspan="4" class="colorevent">Countdown 2021</td>
+			</tr>
+			<tr class="info">
+				<td id="days">2</td>
+				<td id="hours">2</td>
+				<td id="minutes">18</td>
+				<td id="seconds">22</td>
+			</tr>
+			<tr id="colorTime">
+
+				<td>days</td>
+				<td>hours</td>
+				<td>minutes</td>
+				<td>seconds</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+
+			function countdown(){
+				var now = new Date();
+				var eventDate = new Date(now.getFullYear(), 11, 32);
+
+				var currentTiime = now.getTime();
+				var eventTime = eventDate.getTime();
+
+				var remTime = eventTime - currentTiime;
+
+				var s = Math.floor(remTime / 1000);
+				var m = Math.floor(s / 60);
+				var h = Math.floor(m / 60);
+				var d = Math.floor(h / 24);
+
+				h %= 24;
+				m %= 60;
+				s %= 60;
+
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+
+				document.getElementById("days").textContent = d;
+				document.getElementById("days").innerText = d;
+
+				document.getElementById("hours").textContent = h;
+				document.getElementById("minutes").textContent = m;
+				document.getElementById("seconds").textContent = s;
+
+				setTimeout(countdown, 1000);
+			}
+
+			countdown();
+		</script>
+
+		<audio controls autoplay>
+
+			<source src="https://audio.jukehost.co.uk/7ZwubeMToOCOKDgwkZNftr7enDBYLGpu" type="audio/ogg">
+			<source src="https://audio.jukehost.co.uk/7ZwubeMToOCOKDgwkZNftr7enDBYLGpu" type="audio/mpeg">
+
+    </audio>
+
+
+<!-- IDEA:
+
+<img src=ZHC.gif align="right" alt="ZHC">
+<img class="mr" src="ZHC2.gif" alt="ZHC">
+<img class="mr2" src="ZHC3.gif" alt="ZHC"> -->
+
+	</body>
+</html>
