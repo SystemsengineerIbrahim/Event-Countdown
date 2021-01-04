@@ -18,11 +18,11 @@ body {
 
  .mr {
    height: 250px;
-   transform: translateX(400px) translateY(700px);
+   transform: translateX(200px) translateY(1000px);
  }
 
  .mr2 {
-   transform: translateX(0px) translateY(-300px);
+   transform: translateX(-100px) translateY(-600px);
  }
 /* IDEA: iframe {
 width: 100%;
