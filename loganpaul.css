@@ -22,7 +22,7 @@ body {
  }
 
  .mr2 {
-   transform: translateX(-350px) translateY(100px);
+   transform: translateX(-350px) translateY(75px);
  }
 /* IDEA: iframe {
 width: 100%;
